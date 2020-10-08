@@ -1,5 +1,4 @@
 #  bonsai decision support deployment
-![msft Logo](./images/ms-logo.png)
 
 This repository provides an example of a decision support deployment interface to a bonsai brain. The deployment interface connects to an exported brain and runs in a web browser.
 
