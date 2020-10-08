@@ -1,0 +1,5 @@
+streamlit==0.67.1
+docker
+requests
+numpy
+pandas
