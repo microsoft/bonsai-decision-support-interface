@@ -4,6 +4,8 @@ This repository provides an example of a decision support deployment interface t
 
 - Supports *numbers* (float, int, boolean) type states and action only (TODO: extend sample to other types such strings, images)
 
+🚩 Disclaimer: This is not an official Microsoft product. This application is considered an experimental addition to Microsoft Project Bonsai's software toolchain. It's primary goal is to reduce barriers of entry to use Project Bonsai's core Machine Teaching. Pull requests for fixes and small enhancements are welcome, but we do expect this to be replaced by out-of-the-box features of Project Bonsai in the near future.
+
 ## Pre-requisites
 
 - Install python packages `pip install -r requirements.txt`
