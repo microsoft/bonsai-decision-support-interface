@@ -15,7 +15,7 @@ This repository provides an example of a decision support deployment interface t
 ## Usage
 
 1. Have an exported brain running and reachable at `<exported-brain-url>`.  
- **Note:** if no `<exported-brain-url>` is passed as an argument, the default exported-brain-url will be assume reachable at `'http://localhost:5000'`
+ **Note:** if no `<exported-brain-url>` is passed as an argument, the default exported-brain-url will be assume reachable at `http://localhost:5000`
 
     `streamlit run launch_decision_support.py <exported-brain-url>`
 
