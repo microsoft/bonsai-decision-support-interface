@@ -2,7 +2,7 @@
 
 This repository provides an example of a decision support deployment interface to a bonsai brain. The deployment interface connects to an exported brain and runs in a web browser.
 
-- Supports *number* type states and action only (TODO: extend to other types)
+- Supports *numbers* (float, int, boolean) type states and action only (TODO: extend sample to other types such strings, images)
 
 ## Pre-requisites
 
