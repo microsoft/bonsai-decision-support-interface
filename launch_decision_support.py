@@ -19,8 +19,8 @@ def initialize_brain_interface(exported_brain_url = 'http://localhost:5000'):
     """
     brain = ExportedBrainPredictor(predictor_url = exported_brain_url)
     r = requests.get(exported_brain_url+'/v1/api.json').json()
-    state_list = r['paths']['/v1/prediction']['get']['requestBody']['content']['application/json']['schema']['required']
-    action_list = r['paths']['/v1/prediction']['get']['responses']['200']['content']['application/json']['schema']['required']
+    state_list = r['paths']['/v1/prediction']['get']['requestBody']['content']['application/json']['required']
+    action_list = r['paths']['/v1/prediction']['get']['responses']['200']['content']['application/json']['required']
     return brain, state_list, action_list
 
 def get_table_download_link(df):
