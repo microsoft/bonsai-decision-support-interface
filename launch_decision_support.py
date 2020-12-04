@@ -43,7 +43,9 @@ def initialize_brain_interface(exported_brain_url="http://localhost:5000",):
     """
     brain = ExportedBrainPredictor(predictor_url=exported_brain_url)
     r = requests.get(exported_brain_url + "/v1/api.json").json()
-    state_list, action_list = get_state_action_list(r)
+    state_list, action_list = get_state_action_list(
+        r["paths"]["/v1/prediction"]["post"]
+    )
     return brain, state_list, action_list
 
 
