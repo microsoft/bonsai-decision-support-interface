@@ -78,7 +78,7 @@ def main():
         iteration_count=0, state_action_log_df=pd.DataFrame(state_action_log)
     )
 
-    st.beta_set_page_config(
+    st.set_page_config(
         page_title="Bonsai deployment",
         page_icon="./images/msft_icon.png",
         layout="centered",
