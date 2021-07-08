@@ -14,25 +14,9 @@ import SessionState  # from https://gist.github.com/tvst/036da038ab3e999a64497f4
 from exported_brain_interface import ExportedBrainPredictor
 
 
-def _findkeys(node: Union[Dict, List], kv: str):
-    if isinstance(node, list):
-        for i in node:
-            for x in _findkeys(i, kv):
-                yield x
-    elif isinstance(node, dict):
-        if kv in node:
-            yield node[kv]
-        for j in node.values():
-            for x in _findkeys(j, kv):
-                yield x
-
-
-def get_state_action_list(get_request: List):
-
-    req_items = list(_findkeys(get_request, "required"))
-    states = req_items[1]
-    actions = req_items[2]
-
+def get_state_action_list(get_request: Dict):
+    states = get_request['state']['required']
+    actions = get_request['action']['required']
     return states, actions
 
 
@@ -42,9 +26,9 @@ def initialize_brain_interface(exported_brain_url="http://localhost:5000",):
     out: brain_interface, list of states names, list of action names
     """
     brain = ExportedBrainPredictor(predictor_url=exported_brain_url)
-    r = requests.get(exported_brain_url + "/v1/api.json").json()
+    r = requests.get(exported_brain_url + "/validation.json").json()
     state_list, action_list = get_state_action_list(
-        r["paths"]["/v1/prediction"]["post"]
+        r
     )
     return brain, state_list, action_list
 
