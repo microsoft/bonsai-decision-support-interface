@@ -21,6 +21,6 @@ This repository provides an example of a decision support deployment interface t
 
     `streamlit run launch_decision_support.py <exported-brain-url>`
 
-The application will launch http://localhost:8501/ using your default browser.  The default port can be overridden by specifying `--server.port <port>`, e.g. `streamlit run launch_decision_support.py --server.port 8420`
+    The application will launch http://localhost:8501/ using your default browser.  The default port can be overridden by specifying `--server.port <port>`, e.g. `streamlit run launch_decision_support.py --server.port 8420`
 
 2. If you want to stop all running docker containers `docker stop $(docker ps -aq)`
