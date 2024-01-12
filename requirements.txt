@@ -1,4 +1,4 @@
-streamlit==0.84.0
+streamlit==1.30.0
 docker
 requests
 numpy
